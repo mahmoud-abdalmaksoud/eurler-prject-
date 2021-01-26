@@ -1,0 +1,22 @@
+"problem tackeld :
+A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+
+Find the largest palindrome made from the product of two 3-digit numbers."
+
+"programming solution with o (n)2 complexity"
+def reverse_number(number):
+    reversed_number = str(number)
+    reversed_number = txt = reversed_number[::-1]
+    reversed_number = int(reversed_number)
+    return (reversed_number)
+
+    
+
+palindrome = 0
+for x in range (10,100):
+    for y in range (10,100):
+        if x * y == reverse_number(x*y):
+            if x * y > palindrome:
+                palindrome = x*y
+                
+print (palindrome)
