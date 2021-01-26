@@ -1,0 +1,24 @@
+import sympy
+def multiplyList(myList) :     
+    # Multiply elements one by one
+    result = 1
+    for x in myList:
+         result = result * x 
+    return result 
+
+
+
+def prim_factors_of_number(number,end):
+    li_of_factors = []
+    li_of_primes = list(sympy.primerange( 0, end))
+    for i in li_of_primes:
+        if number%i ==0:
+            li_of_factors.append (i)
+    multplied_of_li_factors =  multiplyList(li_of_factors)
+    if number == multplied_of_li_factors:
+        return li_of_factors
+    if number>multplied_of_li_factors:
+        return prim_factors_of_number(number,end = end * 10)
+    
+prim_factors_of_number(600851475143,1)
+    
